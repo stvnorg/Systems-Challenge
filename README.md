@@ -2,7 +2,7 @@
 
 Welcome!
 
-For this code challenge we would like to see you create infrastructure as code for 3 different tasks.
+For this code challenge we would like to see you create infrastructure as code for 2 different tasks.
 
 
 ## Status Endpoint
@@ -28,5 +28,4 @@ The script should be able to provision a replica set with dynamic ips.
 
 ## How to deliver your results
 
-Fork this repo and once you're done send us a pull request.
-
+Fork this repo and once you're done send us a pull request. You can use any configuration management tool you wish.
