@@ -19,14 +19,11 @@ Setup a Docker Container with a `/status` HTTP endpoint on port 8080, which shou
 You can use any language you want for this task.
 
 
-## HA Proxy Configuration
-
-Install and configure HAProxy in a way that all incoming requests to port 80 containing only capital letters go to one HTTP server, but requests containing only digits go to another one. For the 2 HTTP servers mentioned, you can use any HTTP server (Nginx, Apache etc).
-
-HAProxy must respond with 404 status code to all other requests.
-
-
 ## MongoDB Installation with Replication
+
+Setup a MongoDB cluster consisting of 3 shards, each shard must be a replica set of 1 primary and 2 secondaries, plus `mongos` and config server(s).
+
+The script should be able to provision a replica set with dynamic ips.
 
 
 ## How to deliver your results
