@@ -1,31 +1,34 @@
-# Systems Engineering Challenge
-
 Welcome!
 
-For this code challenge we would like to see you create infrastructure as code for 2 different tasks.
+For this challenge we would like to see you create immutable docker set for 2 different tasks.
 
 
 ## Status Endpoint
 
-Setup a Docker Container with a `/status` HTTP endpoint on port 8080, which should return actual system info, including the following:
+Create a Docker Container with a `/status` HTTP endpoint on port 8080, which should return container's system info, including the following:
 
 - Uptime;
 - Free/used memory;
 - Free/used disk space;
 - Kernel version;
-- Last 10 syslog messages;
 - Established network connections;
+- Current running processes;
+- All local hard drives disk utilization;
 
 You can use any language you want for this task.
 
 
 ## MongoDB Installation with Replication
 
-Setup a MongoDB cluster consisting of 3 shards, each shard must be a replica set of 1 primary and 2 secondaries, plus `mongos` and config server(s).
+Create a MongoDB infrastructure using docker compose and everything you need for it.
 
-The script should be able to provision a replica set with dynamic ips.
+`docker-compose up` should create and run at least 3 mongodb containers that will automagically form a replicaset.
+
+You can't use static hostnames or ips for mongodb containers. All mongodb containers from a replicaset should discover each other and agree about who will be the master.
+
+It should be possible to run any number of mongodb containers via docker compose and they should be still able to discover each other and form a replicaset.
 
 
 ## How to deliver your results
 
-Fork this repo and once you're done send us a pull request. You can use any configuration management tool you wish.
+Fork this repo and once you're done send us a pull request.
