@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>Docker Container Status</title>
+    <link rel='stylesheet' href="{{ url_for('static', filename='style.css') }}"/>
+</head>
+<body>
+    <div class="content">
+		<h3>Container Hostname/ID: {{ hostname }}</h3>
+
+        <div class="row">
+            <span id="label">Uptime:</span>
+            <pre>
+                {{ uptime }}
+            </pre>
+		</div>
+
+		<div class="row">
+			<span id="label">Memory Usage:</span>
+            <pre>
+                {{ mem }}
+            </pre>
+		</div>
+		
+		<div class="row">
+			<span id="label">Disk Usage:</span>
+            <pre>
+                {{ disk }}
+            </pre>
+        </div>
+
+		<div class="row">
+			<span id="label">Kernel Version:</span>
+			<pre>
+				{{ kernel }}
+			</pre>
+		</div>
+
+		<div class="row">
+			<span id="label">Network Connection:</span>
+			<pre>
+				{{ net }}
+			</pre>
+		</div>
+
+		<div class="row">
+			<span id="label">Running Process:</span>
+			<pre>
+				{{ run_process }}
+			</pre>
+		</div>
+
+    </div>
+	
+	<div class="footer">
+		@ 2017 Steven Stevanus
+	</div>
+</body>
+</html>
+
